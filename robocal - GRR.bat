@@ -80,6 +80,7 @@ if errorlevel 1 (
   echo ERROR: Wrong RoboCal tester.
   echo This GRR run is assigned to !ROBOCAL_TESTER!, but this computer is %COMPUTERNAME%.
   echo Move the glasses to tester !ROBOCAL_TESTER! and run RoboCal again.
+  pause
   exit /b 5
 )
 set "NETWORK_BACKUP_ROOT=\\RBCIN14\D\RoboGRR_!ROBOCAL_TESTER!"

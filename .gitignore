@@ -14,3 +14,9 @@ venv/
 
 # Generated CSV data
 *.csv
+
+# Generated preprocessing runtime data
+/OP.dat
+ML_PreProcess_1.00a_20260716/tid.dat
+ML_PreProcess_1.00a_20260716/Tools/logs/rclone-upload-*.log
+ML_PreProcess_1.00a_20260716/tmp/error_*.log

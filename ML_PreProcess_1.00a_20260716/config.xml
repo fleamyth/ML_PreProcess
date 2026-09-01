@@ -23,12 +23,13 @@
 		<Exec PreWait="0" Wait="3.0" Retry="0" Ask4Retry="False" File="Tools\pre_process_single_no_audio.bat" Action="" ShowTerminal="True" FailStop="False" Rebase="False" Log="" />
 		<ErrorTransform>
 			<Replace Source="0" To="0" PEGA="" String="Success" />
-			<Replace Source="FB" To="8F042281" PEGA="NM100065015" String="!- TypeC_CHECK -! Type C tester device not found." />
-			<Replace Source="FC" To="8F042280" PEGA="NM100065014" String="!- TypeC_CHECK -! Type C tester LOG files not found." />
-			<Replace Source="FD" To="8F041223" PEGA="EM100032968" String="!- U3PE -! USB-C Side Port 1 failed to connect and enumerate" />
-			<Replace Source="FE" To="8F041224" PEGA="EM100032969" String="!- U3PE -! USB-C Side Port 2 failed to connect and enumerate" />
-			<Replace Source="FF" To="8F042250" PEGA="AKGFWV" String="!- TypeC_CHECK -! Type C USB 3.0 funtion Fail." />
-			<Replace Source="*" To="8F042250" PEGA="AKGFWV" String="!- TypeC_CHECK -! Type C USB 3.0 funtion Fail." />
+			<Replace Source="C9" To="C9" PEGA="" String="!- PRE_PROCESS -! WFSC pre-process failed." />
+			<Replace Source="CA" To="CA" PEGA="" String="!- PRE_PROCESS -! UFSC pre-process failed." />
+			<Replace Source="CB" To="CB" PEGA="" String="!- PRE_PROCESS -! DGC or DCC pre-process failed." />
+			<Replace Source="CC" To="CC" PEGA="" String="!- PRE_PROCESS -! Audio pre-process failed." />
+			<Replace Source="CF" To="CF" PEGA="" String="!- PRE_PROCESS -! DGV pre-process failed." />
+			<Replace Source="FF" To="FF" PEGA="" String="!- PRE_PROCESS -! Unknown status or unnumbered first_error." />
+			<Replace Source="*" To="FF" PEGA="" String="!- PRE_PROCESS -! Unknown status or unnumbered first_error." />
 		</ErrorTransform>
 	</Test>
 	<Test Name="ML" Variation="ML" Class="BootCheck" Front="False" Loop="1" Mode="Sequential" Hold="0" Timeout="0" Check="False">
